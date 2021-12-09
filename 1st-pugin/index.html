@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- css folder from flexsilder plugin -->
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+  <title>Document</title>
+  <style>
+  body {
+    /* background-color: green; */
+  }
+.flex-direction-nav a::before {
+  color: green;
+
+}
+
+.flexslider .slides img {
+  width: 70%;
+}
+
+.flex-control-paging li a.flex-active{
+background: rgb(23 55 212 / 90%);
+}
+
+.flex-control-paging li a{
+  background: rgb(177 20 206 / 50%);
+  width: 38px;
+  height: 28px;
+}
+
+.header-container {
+  position:absolute;
+  color: blue
+  
+
+}
+  </style>
+</head>
+<body>
+  <h1>First JQuery Plugin</h1>
+
+  <!-- flexsilder from: https://woocommerce.com/flexslider/ -->
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <div class="header-container">
+        <h2>Welcome to my Dog Website</h2>
+        <h3>This website is all about dogs</h3>
+      </div>
+      <img src="img/bunny-one.jpeg" />
+    </li>
+    <li>
+      <img src="img/lamb-one.jpeg" />
+    </li>
+    <li>
+      <img src="img/dog-one.jpeg" />
+    </li>
+  </ul>
+</div>
+
+<!-- testing a button -->
+  <!-- <button id="test-button">working</button> -->
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  <script src="js/jquery.flexslider.js"></script>
+  <script>
+// last line should now have a comma
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+      animation: "fade",
+      slideshow: true,
+      slideshowSpeed: 2000,
+      easing: "swing"
+    });
+  });
+
+  </script>
+</body>
+</html>
